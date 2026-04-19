@@ -110,7 +110,62 @@ const EM_DATA = {
     nashville:{ label: "Nashville TN (MRO)", programs: ["Lineage 1000 completions", "Fleet MRO", "Americas service network"], roles: 800 },
     newDelhi: { label: "New Delhi IN (Representative office)", programs: ["India sales", "Adani + Mahindra partnerships", "C-390 India campaign"], roles: 25 },
     gaviao:   { label: "Gavião Peixoto SP (Defense)", programs: ["C-390 Millennium final assembly", "KC-390 tanker", "Super Tucano"], roles: 2000 }
-  }
+  },
+
+  outreachPlaybook: {
+    badge: "Cold→Warm",
+    headline: "India Adani final assembly line (Feb 2026 MOU) is the best cold-call opener for Embraer",
+    triggers: [
+      { icon:"🇮🇳", label:"India Final Assembly — Adani MOU (Feb 2026)",
+        body:"Embraer signed MOU with Adani Defence in Feb 2026 for E-175 final assembly in India. Build-out phase is now — Embraer needs India-based ER&D, DGCA cert support, and local engineering.",
+        action:"Email hook: 'Adani assembly line is a game-changer. We support E-175 systems engineering, DGCA certification, and production ramp from our Hyderabad HQ. 20-min intro?'" },
+      { icon:"📈", label:"E2 Production Ramp — 47% Delivery Growth Q1 2026",
+        body:"Q1 2026 deliveries up 47% YoY. Target 80–85 aircraft in 2026. Engineering bottleneck = design optimisation, production support, systems integration at higher rates.",
+        action:"Pitch: 'Ramp speed is great until engineering becomes the bottleneck. We've scaled with [ref OEM] at similar rates. Call this week?'" },
+      { icon:"⚙️", label:"GTF Engine / P&W Supply Constraints",
+        body:"Pratt & Whitney GTF delays ongoing. Embraer working with suppliers to meet ramp. Airframe-engine integration engineering needed to resolve thermal/systems issues.",
+        action:"Technical angle: 'GTF integration engineering — thermal interface, systems optimisation, cert documentation. We've done this for P&W-powered programs.'" },
+      { icon:"🌎", label:"LATAM / South Asia Market Expansion",
+        body:"E2 and E-175 targeting LATAM, Africa, South/Southeast Asia as growth regions. Customer-specific certification, local ops support needed in each market.",
+        action:"LATAM/India angle: 'As Embraer expands to new markets we can handle local cert support — DGCA, ANAC, CAAS. One engineering team, multiple market certs.'" }
+    ],
+    coldToWarm: [
+      { step:1, label:"Signal Monitor", body:"Monitor Embraer delivery reports, Adani JV announcements, E2 order updates. Each is a live outreach trigger." },
+      { step:2, label:"Personalised Email", body:"Reference Adani MOU or E2 delivery milestone. One sentence on Cyient India ER&D and DGCA credential. No deck on first touch." },
+      { step:3, label:"LinkedIn Outreach", body:"Connect with Embraer VP Engineering and Brazil HQ procurement. Engage Adani/India content with substantive comment." },
+      { step:4, label:"Event Pre-Outreach", body:"2 weeks before MRO Americas (Apr 21) or Farnborough (Jul 20): email to schedule at-show meeting." },
+      { step:5, label:"Warm Meeting", body:"Agenda: Adani line staffing model → Cyient India headcount ramp → DGCA cert support → E2 systems engineering pilot scope." }
+    ]
+  },
+  partnerships: [
+    { name:"Adani Defence & Aerospace", type:"India JV / Assembly", status:"MOU Feb 2026",
+      desc:"E-175 final assembly line MOU signed Feb 2026. Expanding India manufacturing presence with Adani for South Asian regional aviation market.",
+      angle:"Biggest Cyient opportunity: India ER&D, systems engineering, DGCA certification for Adani/Embraer assembly. Position as engineering backbone of the India operation." },
+    { name:"Pratt & Whitney (GTF Engines)", type:"Propulsion Partner", status:"Active / Constrained",
+      desc:"GTF engines power E2 jets. P&W supply constraints in 2026 affecting delivery ramp. Airframe-engine integration engineering work ongoing.",
+      angle:"GTF interface engineering — thermal management, systems documentation, certification liaison. Cyient can support Embraer under supply-chain pressure." },
+    { name:"FACC (Austria — Aerostructures)", type:"Tier-1 Supplier", status:"Advisory Council 2025",
+      desc:"FACC joined Embraer Supplier Advisory Council 2025. Provides composite aerostructures, nacelles, and cabin components for E-jets.",
+      angle:"Aerostructures documentation, CMM/IPC tech pubs, structural certification support — engineering work behind FACC deliverables is outsourceable via Cyient." },
+    { name:"Airlink (Component Pool)", type:"MRO / Aftermarket", status:"Active",
+      desc:"Component pool program for E2 fleets — aftermarket support, MRO planning, spare parts management for global E2 operators.",
+      angle:"Tech pubs, overhaul documentation, and MRO engineering for E2 platforms — Cyient supports Airlink's growing component pool needs." }
+  ],
+  events: [
+    { name:"MRO Americas", date:"Apr 21–23, 2026", location:"Orlando, FL",
+      type:"Trade Show", priority:"🔴 MUST",
+      why:"Embraer E-jets dominate North American regional market. Embraer aftermarket and customer support team attends. Best US event for supply-chain leadership access." },
+    { name:"Farnborough Airshow", date:"July 20–24, 2026", location:"Farnborough, UK",
+      type:"Trade Show", priority:"🔴 MUST",
+      why:"Embraer uses Farnborough for major order and industrial partnership announcements. Engineering VPs and procurement leadership attend." },
+    { name:"LABACE (Latin America Bizav)", date:"Aug 2026", location:"São Paulo, Brazil",
+      type:"Trade Show", priority:"🟠 HIGH",
+      why:"Embraer's home territory — executive and engineering leadership attend. Best access to São Paulo HQ teams and Adani/India relationship contacts." },
+    { name:"AeroDef Manufacturing", date:"Apr 14–16, 2026", location:"Boston, MA",
+      type:"Conference", priority:"🟡 MEDIUM",
+      why:"Embraer Defense (KC-390, Super Tucano) team attends. Defense ER&D, systems engineering, and certification documentation angle." }
+  ]
+
 };
 </script>
 
@@ -151,6 +206,18 @@ const EM_DATA = {
     <div class="sidebar-item" onclick="switchSection(event,'hiring')">💼 Hiring Intelligence</div>
     <div class="sidebar-item" onclick="switchSection(event,'signals')">📡 Signal Chains</div>
     <div class="sidebar-item" onclick="switchSection(event,'competitive')">⚔️ Competitive Intel</div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Outreach Playbook</div>
+    <div class="sidebar-item" onclick="switchSection(event,'outreach')">🤝 Outreach Playbook <span style="background:#4caf50;color:#fff;padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;margin-left:4px;">Cold→Warm</span></div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Partnership &amp; Alliances</div>
+    <div class="sidebar-item" onclick="switchSection(event,'partnerships')">🤝 Partnerships &amp; Alliances</div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Industry Events</div>
+    <div class="sidebar-item" onclick="switchSection(event,'events')">📅 Industry Events</div>
+  </div>
   </div>
   <div class="sidebar-section">
     <div class="sidebar-label">Programs & Strategy</div>
@@ -733,6 +800,33 @@ const EM_DATA = {
 </div>
 
 <!-- ═══ COMPETITIVE INTEL ═══ -->
+
+<!-- ═══ OUTREACH PLAYBOOK ═══ -->
+<div id="outreach" class="section">
+  <div class="section-title">🤝 Outreach Playbook — <span id="op-headline"></span></div>
+  <div id="op-badge" style="display:inline-block;background:#4caf50;color:#fff;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:22px;"></div>
+  <div id="op-triggers" class="grid-2" style="margin-bottom:28px;"></div>
+  <div class="card" style="border-top-color:#1a1a2e;">
+    <div class="card-title">Cold → Warm: 5-Step Sequence</div>
+    <div id="op-steps"></div>
+  </div>
+</div>
+
+<!-- ═══ PARTNERSHIPS ═══ -->
+<div id="partnerships" class="section">
+  <div class="section-title">🤝 Partnerships &amp; Alliances</div>
+  <div id="pw-cards" class="grid-2"></div>
+</div>
+
+<!-- ═══ EVENTS ═══ -->
+<div id="events" class="section">
+  <div class="section-title">📅 Industry Events — 2026 Calendar</div>
+  <div style="background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:12px 16px;margin-bottom:22px;font-size:12.5px;color:#92400e;">
+    🗓️ <strong>Why events matter:</strong> Pre-event outreach (2 weeks before each show) converts cold emails into scheduled meetings with procurement and engineering leadership.
+  </div>
+  <div id="ev-cards" class="grid-2"></div>
+</div>
+
 <div id="competitive" class="section">
   <div class="section-title">⚔️ Competitive Intel</div>
 
@@ -841,6 +935,41 @@ const EM_DATA = {
 </div><!-- end container -->
 
 <script>
+
+  // ── Outreach Playbook ────────────────────────────────────────────────
+  const op = EM_DATA.outreachPlaybook;
+  if(op && document.getElementById('op-headline')) {
+    document.getElementById('op-headline').textContent = op.headline;
+    document.getElementById('op-badge').textContent    = op.badge;
+    document.getElementById('op-triggers').innerHTML   = op.triggers.map(t => `
+      <div class="card" style="border-top-color:#7c3aed;">
+        <div class="card-title">${t.icon} ${t.label}</div>
+        <p style="font-size:12.5px;line-height:1.7;color:#444;margin-bottom:10px;">${t.body}</p>
+        <div style="background:#f0fdf4;border-left:3px solid #22c55e;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#166534;font-weight:600;">⚡ Action: ${t.action}</div>
+      </div>`).join('');
+    document.getElementById('op-steps').innerHTML = op.coldToWarm.map(s => `
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #f0f0f0;">
+        <div style="min-width:28px;height:28px;background:#7c3aed;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">${s.step}</div>
+        <div><div style="font-size:13px;font-weight:700;color:#1a1a2e;margin-bottom:4px;">${s.label}</div>
+        <div style="font-size:12px;color:#555;line-height:1.6;">${s.body}</div></div>
+      </div>`).join('');
+    document.getElementById('pw-cards').innerHTML = EM_DATA.partnerships.map(p => `
+      <div class="card" style="border-top-color:#0284c7;">
+        <div class="card-title">${p.name} <span class="tag">${p.type}</span> <span class="tag" style="background:#dcfce7;color:#166534;">${p.status}</span></div>
+        <p style="font-size:12.5px;line-height:1.7;color:#444;margin-bottom:10px;">${p.desc}</p>
+        <div style="background:#eff6ff;border-left:3px solid #0284c7;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#1e40af;font-weight:600;">🎯 Cyient Angle: ${p.angle}</div>
+      </div>`).join('');
+    document.getElementById('ev-cards').innerHTML = EM_DATA.events.map(e => `
+      <div class="card" style="border-top-color:#d97706;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div class="card-title" style="margin-bottom:0;">${e.name}</div>
+          <span style="font-size:12px;font-weight:700;">${e.priority}</span>
+        </div>
+        <div style="font-size:12px;color:#666;margin-bottom:6px;">📍 ${e.location} &nbsp;·&nbsp; 📅 ${e.date} &nbsp;·&nbsp; <span class="tag">${e.type}</span></div>
+        <p style="font-size:12.5px;line-height:1.7;color:#444;">${e.why}</p>
+      </div>`).join('');
+  }
+
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('sb-refresh').textContent = EM_DATA.lastRefreshed;
   document.getElementById('kpi-rev').textContent  = '$' + EM_DATA.revenue + 'B';
